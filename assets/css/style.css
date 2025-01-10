@@ -1,0 +1,187 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background: linear-gradient(135deg, rgb(36, 4, 16) 0%, rgb(46, 5, 20) 100%);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* strat header */
+header {
+  background-color: #1e1915;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+header::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 22px;
+  background: linear-gradient(
+    90deg,
+    black,
+    red 20%,
+    orange 40%,
+    yellow 60%,
+    orange 80%,
+    red 90%,
+    black
+  );
+}
+header::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 22px;
+  background: linear-gradient(
+    90deg,
+    black,
+    red 20%,
+    orange 40%,
+    yellow 60%,
+    orange 80%,
+    red 90%,
+    black
+  );
+}
+header h2 {
+  color: #ac9140;
+  font-size: 55px;
+}
+/* end header */
+/* start landing */
+/*start whatsApp Icon  */
+.whats {
+  position: fixed;
+  right: 20px;
+  bottom: 48px;
+}
+.whats img {
+  width: 90px;
+}
+/* end whatsApp Icon */
+
+main .container {
+  text-align: center;
+}
+main .container .box {
+  padding-top: 12px;
+}
+main .box p {
+  font-size: 35px;
+  font-weight: bold;
+  color: #ac9140;
+  padding: 12px;
+  position: relative;
+}
+
+main .box:nth-child(2) p {
+  font-size: 35px;
+  font-weight: bold;
+  color: #ac9140;
+  padding: 2px;
+  position: relative;
+}
+main .box:not(:nth-child(2)) p::after {
+  content: "";
+  height: 3px;
+  width: 200px;
+  left: calc(50% - 100px);
+  background: linear-gradient(
+      90deg,
+      black,
+      red 15%,
+      orange 30%,
+      yellow 50%,
+      orange 70%,
+      red 85%,
+      black
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.3) 10%,
+      rgba(255, 200, 0, 0.2) 40%,
+      rgba(255, 69, 0, 0.1) 70%
+    ),
+    radial-gradient(circle at 30% 70%, rgba(255, 69, 0, 0.2), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(255, 140, 0, 0.2), transparent 50%);
+  position: absolute;
+  bottom: -3px;
+}
+
+main .box:not(:last-child) .image img {
+  width: 100%;
+  margin-top: 33px;
+}
+main .box:last-child .image img {
+  width: 100%;
+  margin-top: 22px;
+}
+/* end landing */
+/* start gallary */
+.gallary {
+  padding-top: 30px;
+}
+.gallary .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallary .container img {
+  width: 100%;
+}
+
+.gallary .container .image .text {
+  text-align: center;
+  background-color:#ac9140;
+  border-radius: 2px;
+  margin-top: -10px;
+  padding-top: 7px;
+}
+.gallary .container .image .text p {
+  color: white;
+  font-size: 34px;
+}
+/* end gallary */
